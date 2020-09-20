@@ -1,0 +1,12 @@
+.navlink {
+  width: 100px;
+  font-weight: bold;
+  text-align: center;
+  /* border: 5px solid green !important; */
+}
+.navlink:hover {
+  background-color: #ddd;
+  color: #212121 !important;
+  /* width: 150px; */
+  transition: 0.25s linear;
+}
