@@ -6,6 +6,8 @@ import Link from "next/link";
 const name = "Divyansh Arya";
 export const siteTitle = "Next.js Sample Website";
 
+import Loader from "./loader/loader";
+
 export default function Layout({ children, home }) {
   return (
     <div className={styles.container}>
@@ -16,6 +18,8 @@ export default function Layout({ children, home }) {
           content="Learn how to build a personal website using Next.js"
         />
       </Head>
+
+      <Loader />
       <header className={styles.header}>
         {home ? (
           <>

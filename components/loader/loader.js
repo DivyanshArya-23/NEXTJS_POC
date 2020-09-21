@@ -1,19 +1,25 @@
 import utilStyles from "./loader.module.css";
 
+import { useSelector } from "react-redux";
+
 const SimpleLoader = () => {
+  const loader = useSelector((state) => state.loader);
+
   return (
-    <div
-      className={`${
-        utilStyles.greyBg
-      } ${"text-center d-flex d-flex align-items-center justify-content-center position-fixed"}`}
-    >
+    loader && (
       <div
-        className={`${utilStyles.spinner} ${"spinner-border text-white"}`}
-        role="status"
+        className={`${
+          utilStyles.greyBg
+        } ${"text-center d-flex d-flex align-items-center justify-content-center position-fixed"}`}
       >
-        <span className="sr-only">Loading...</span>
+        <div
+          className={`${utilStyles.spinner} ${"spinner-border text-white"}`}
+          role="status"
+        >
+          <span className="sr-only">Loading...</span>
+        </div>
       </div>
-    </div>
+    )
   );
 };
 
