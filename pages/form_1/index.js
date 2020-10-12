@@ -38,6 +38,7 @@ const SignupForm = () => {
       // alert(JSON.stringify(values, null, 2));
     },
   });
+
   return (
     <>
       <Loader />
